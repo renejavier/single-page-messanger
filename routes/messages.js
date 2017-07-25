@@ -29,7 +29,7 @@ router.use('/', function(req, res, next) {
     if (err) {
       return res.status(401).json({
         title: 'Not Authenticated',
-        error: 'You must be logged in to add a message'
+        error: {message: 'You must be logged in to add a message'}
       });
     }
     next();
